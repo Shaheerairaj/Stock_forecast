@@ -4,3 +4,4 @@ gdelt
 gdeltdoc
 hyperopt
 polars
+plotly
