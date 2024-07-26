@@ -3,10 +3,12 @@ import streamlit as st
 import yfinance as yf
 from plotly import graph_objs as go
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 start = '2015-01-01'
-today = '2024-07-25'
+today = datetime.today()
+end = today - timedelta(days=1)
+end = end.strftime("%Y-%m-%d")
 
 st.title("Stock Prediction App")
 
@@ -17,7 +19,7 @@ n_years = st.slider("Days of prediction: ", 1, 90)
 
 # @st.cache_data
 def load_data(ticker):
-    data = yf.download(ticker, start, today)
+    data = yf.download(ticker, start, end)
     data.reset_index(inplace=True)
     return data
 
