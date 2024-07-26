@@ -6,7 +6,7 @@ from plotly import graph_objs as go
 from datetime import datetime
 
 start = '2015-01-01'
-today = datetime.today().strftime("%Y-%m-%d")
+today = '2024-07-26'
 
 st.title("Stock Prediction App")
 
