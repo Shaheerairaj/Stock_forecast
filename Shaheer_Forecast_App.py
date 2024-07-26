@@ -35,6 +35,6 @@ def plotly_data():
     fig.layout.update(title_text="Stock Price Data", xaxis_rangeslider_visible=True, yaxis_title='Price in USD')
     st.plotly_chart(fig)
 
-# plotly_data()
+plotly_data()
 
-def plot_data()
+# def plot_data()
