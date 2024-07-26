@@ -17,7 +17,7 @@ selected_stock = st.selectbox("Select dataset for prediction", stocks)
 
 n_years = st.slider("Days of prediction: ", 1, 90)
 
-# @st.cache_data
+@st.cache_data
 def load_data(ticker):
     data = yf.download(ticker, start, end)
     data.reset_index(inplace=True)
