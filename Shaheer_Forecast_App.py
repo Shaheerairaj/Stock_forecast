@@ -28,7 +28,7 @@ data = load_data(selected_stock)
 data_load_state.text("Data load completed...")
 
 st.subheader("Raw data")
-st.write(data.head())
+st.write(data.tail())
 
 def plotly_data():
     fig = go.Figure()
